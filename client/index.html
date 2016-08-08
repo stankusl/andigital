@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible", content="IE=edge,chrome=1">
+    <meta name="viewport", content="width=device-width, initial-scale=1.0">
+
+    <!-- enable html5mode routes -->
+    <base href="/">
+
+    <title>ANDigital Test</title>
+
+    <!-- deps -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+
+    <!-- app -->
+    <link rel="stylesheet" href="app/app.css">
+  </head>
+
+  <body ng-app="app">
+    <!--  where ui-router load the views -->
+    <div ui-view></div>
+
+
+    <p><button onclick="geoFindMe()">Show my location</button></p>
+    <div id="out"></div>
+
+    <!-- deps -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- app -->
+    <script src="app/application.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/components/homepage/homepage.service.js"></script>
+    <script src="app/components/homepage/homepage.ctrl.js"></script>
+    <script src="app/components/postcode/postcode.ctrl.js"></script>
+
+  </body>
+</html>

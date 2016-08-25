@@ -7,7 +7,7 @@ angular.module('app', [
         'use strict';
 
         // this is available from all across the app
-        $rootScope.appName = 'ANDigital';
+        $rootScope.appName = 'Interactive Investor';
 
         // make $state available from templates
         $rootScope.$state = $state;

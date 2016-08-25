@@ -11,12 +11,14 @@
         };
 
 
-        function getNearbyPlacesFromPosition(lat, lon) {
+        function getNearbyPlacesFromPosition(lat, lon, query) {
             var deferred = $q.defer();
+
+            var staticURL = "https://api.foursquare.com/v2/venues/search?client_id=ORHFOHAN0JXJJYGFW3UCWKGIMHSNHRJAAOB5V0TF3N12FHPP&client_secret=ZB0H2GGGUE5KKVZAKVXBFUWCYCXB0ER40VKYYVDQGPMWSFIG&v=20130815&ll=";
 
             $http({
                 method: "GET",
-                url: "https://api.foursquare.com/v2/venues/search?client_id=ORHFOHAN0JXJJYGFW3UCWKGIMHSNHRJAAOB5V0TF3N12FHPP&client_secret=ZB0H2GGGUE5KKVZAKVXBFUWCYCXB0ER40VKYYVDQGPMWSFIG&v=20130815&ll=53.350,-6.26&query=sushi",
+                url: staticUrl + lat + "," + lon + "&query=" + query
             })
                 .then(function (response) {
                     deferred.resolve(response.data);

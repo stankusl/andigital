@@ -16,4 +16,7 @@ angular.module('app')
             url: '/postcode',
             templateUrl: 'app/components/postcode/postcode.html'
         });
+
+
+        // Todo : Create Directive; test Dataservices; Be Prepared to deploy;
     }]);
